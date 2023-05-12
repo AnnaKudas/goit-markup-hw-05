@@ -751,7 +751,7 @@ footer .footer-logo {
   transition: background-color var(--anim-fast), border var(--anim-fast);
 }
 .modal-close-btn:hover,
-:focus {
+.modal-close-btn:focus {
   background-color: var(--color-ocean);
   border: none;
   fill: var(--color-white);
