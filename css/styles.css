@@ -686,8 +686,11 @@ footer .footer-logo {
   width: 100%;
   height: 100%;
 }
-.cards-item:hover .overlay:hover,
-.cards-item:focus .overlay:focus {
+.cards-item:hover .overlay {
+  transform: translateY(0);
+}
+
+.cards-item:focus .overlay {
   transform: translateY(0);
 }
 /*.cards-item:focus .overlay {
