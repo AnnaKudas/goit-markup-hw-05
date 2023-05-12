@@ -19,7 +19,7 @@
   --indent: 24px;
   --items: 4;
 
-  --anim-slow: 300ms ease-in-out;
+  --anim-fast: 300ms ease-in-out;
   --anim-fast: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   --modal-idx: 100;
@@ -586,8 +586,8 @@ footer .footer-logo {
   border-radius: 4px;
   cursor: pointer;
   border: 1px solid var(--color-cornflower);
-  transition: color var(--anim-slow), background-color var(--anim-slow),
-    box-shadow var(--anim-slow), border var(--anim-slow);
+  transition: color var(--anim-fast), background-color var(--anim-fast),
+    box-shadow var(--anim-fast), border var(--anim-fast);
 }
 .container-btn {
 }
@@ -632,7 +632,7 @@ footer .footer-logo {
 .card-section-link {
   text-decoration: none;
   display: block;
-  transition: box-shadow var(--anim-slow);
+  transition: box-shadow var(--anim-fast);
 }
 .card-section-link:hover {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
@@ -677,7 +677,7 @@ footer .footer-logo {
   left: 0;
 
   transform: translateY(100%);
-  transition: transform var(--anim-slow);
+  transition: transform var(--anim-fast);
 
   padding: 40px 32px;
   background-color: var(--color-iris);
@@ -746,7 +746,7 @@ footer .footer-logo {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  transition: background-color var(--anim-fast);
+  transition: background-color var(--anim-fast), border var(--anim-fast);
 }
 .modal-close-btn:hover,
 :focus {
