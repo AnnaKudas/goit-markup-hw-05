@@ -587,7 +587,7 @@ footer .footer-logo {
   cursor: pointer;
   border: 1px solid var(--color-cornflower);
   transition: color var(--anim-fast), background-color var(--anim-fast),
-    box-shadow var(--anim-fast), border var(--anim-fast);
+    box-shadow var(--anim-fast), border-color var(--anim-fast);
 }
 .container-btn {
 }
@@ -635,12 +635,12 @@ footer .footer-logo {
   transition: box-shadow var(--anim-fast);
 }
 .card-section-link:hover {
-  transform: translateY(0%);
+  /*transform: translateY(0%);*/
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .card-section-link:focus {
-  transform: translateY(0%);
+  /*transform: translateY(0%);*/
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
@@ -687,6 +687,9 @@ footer .footer-logo {
   height: 100%;
 }
 .cards-item:hover .overlay {
+  transform: translateY(0);
+}
+.cards-item:focus .overlay {
   transform: translateY(0);
 }
 
