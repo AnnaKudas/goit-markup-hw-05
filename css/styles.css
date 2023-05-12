@@ -460,7 +460,7 @@ img {
   color: var(--color-light-slate);
   border: 1px solid;
   border-color: var(--color-light-slate);
-  transition: color var(--anim-fast), border-color var(--anim-fast);
+  transition: border-color var(--anim-fast), color var(--anim-fast);
 }
 
 .customer-icon-link:hover {
@@ -707,7 +707,7 @@ footer .footer-logo {
   top: 0;
   left: 0;
   background-color: rgba(46, 47, 66, 0.4);
-  z-index: var(--modal-idx);
+  z-index: var(-- -idx);
 
   transition: opacity var(--anim-fast), visibility var(--anim-fast);
 }
@@ -719,11 +719,14 @@ footer .footer-logo {
 .modal {
   position: absolute;
   transform: translate(-50%, -50%);
+  transition: transform var(--anim-fast);
 
   top: calc(50%);
   left: calc(50%);
   width: 408px;
-  height: 584px;
+
+  min-height: 576px;
+
   background-color: var(--color-dairy);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -742,7 +745,15 @@ footer .footer-logo {
   height: 24px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color var(--anim-fast);
+}
+.modal-close-btn:hover,
+:focus {
+  background-color: var(--color-ocean);
+  border: none;
+  fill: var(--color-white);
 }
 .modal-close-icon {
-  fill: var(--color-navy-blue);
+  transition: fill var(--anim-fast);
 }
