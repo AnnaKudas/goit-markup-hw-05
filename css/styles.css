@@ -18,6 +18,11 @@
   /*others*/
   --indent: 24px;
   --items: 4;
+
+  --anim-slow: 300ms ease-in-out;
+  --anim-fast: 200ms ease-in-out;
+
+  --modal-idx: 100;
 }
 
 /*OTHER*/
@@ -133,6 +138,7 @@ img {
   display: block;
   padding-top: 24px;
   padding-bottom: 24px;
+  transition: color var(--anim-fast);
 }
 .header-nav-link:hover,
 .header-nav-link:focus {
@@ -230,6 +236,8 @@ img {
   margin-left: auto;
   margin-right: auto;
   display: block;
+
+  transition: color var(--anim-slow), background-color var(--anim-slow);
 }
 
 .btn:hover {
@@ -398,6 +406,7 @@ img {
   height: 40px;
   background-color: var(--color-iris);
   color: var(--color-cloud);
+  transition: background-color var(--anim-slow);
 }
 
 .social-link:hover {
@@ -447,6 +456,7 @@ img {
   color: var(--color-light-slate);
   border: 1px solid;
   border-color: var(--color-light-slate);
+  transition: color var(--anim-slow), background-color var(--anim-slow);
 }
 
 .customer-icon-link:hover {
@@ -531,6 +541,7 @@ footer .footer-logo {
   height: 40px;
   background-color: var(--color-iris);
   color: var(--color-cloud);
+  transition: background-color var(--anim-slow);
 }
 .social-link-footer:hover {
   background-color: var(--color-green);
@@ -571,6 +582,8 @@ footer .footer-logo {
   border-radius: 4px;
   cursor: pointer;
   border: 1px solid var(--color-cornflower);
+  transition: color var(--anim-slow), background-color var(--anim-slow),
+    box-shadow var(--anim-slow), border var(--anim-slow);
 }
 .container-btn {
 }
@@ -615,6 +628,7 @@ footer .footer-logo {
 .card-section-link {
   text-decoration: none;
   display: block;
+  transition: box-shadow var(--anim-slow);
 }
 .card-section-link:hover {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
@@ -653,15 +667,21 @@ footer .footer-logo {
 
 /*Overlay*/
 .overlay {
-  display: none;
+  /*display: none;*/
   position: absolute;
   top: 0;
   left: 0;
+
+  transform: translateY(100%);
+  transition: transform var(--anim-slow);
 
   padding: 40px 32px;
   background-color: var(--color-iris);
   width: 100%;
   height: 100%;
+}
+.cards-item:hover .overlay {
+  transform: translateY(0);
 }
 
 .overlay-text {
@@ -670,23 +690,34 @@ footer .footer-logo {
 
 .portfolio-card-thumb {
   position: relative;
+  overflow: hidden;
 }
 
 /*modal Window*/
 
 .backdrop {
-  display: none;
+  /*  display: none;*/
   width: 100%;
   height: 100%;
   position: fixed;
   top: 0;
   left: 0;
   background-color: rgba(46, 47, 66, 0.4);
+  z-index: var(--modal-idx);
+
+  transition: opacity var(--anim-fast), visibility var(--anim-fast);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 .modal {
   position: absolute;
-  top: calc(50% - 250px);
-  left: calc(50% - 225px);
+  transform: translate(-50%, -50%);
+
+  top: calc(50%);
+  left: calc(50%);
   width: 408px;
   height: 584px;
   background-color: var(--color-dairy);
