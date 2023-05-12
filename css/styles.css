@@ -178,6 +178,9 @@ img {
   display: flex;
   gap: 40px;
 }
+.header-contact-item {
+  transition: color var(--anim-fast);
+}
 .header-contact-item:hover {
   color: var(--color-ocean);
 }
@@ -238,7 +241,7 @@ img {
   margin-right: auto;
   display: block;
 
-  transition: color var(--anim-slow), background-color var(--anim-slow);
+  transition: background-color var(--anim-fast);
 }
 
 .btn:hover {
@@ -407,7 +410,7 @@ img {
   height: 40px;
   background-color: var(--color-iris);
   color: var(--color-cloud);
-  transition: background-color var(--anim-slow);
+  transition: background-color var(--anim-fast);
 }
 
 .social-link:hover {
@@ -457,7 +460,7 @@ img {
   color: var(--color-light-slate);
   border: 1px solid;
   border-color: var(--color-light-slate);
-  transition: color var(--anim-slow), background-color var(--anim-slow);
+  transition: color var(--anim-fast), border-color var(--anim-fast);
 }
 
 .customer-icon-link:hover {
@@ -542,7 +545,7 @@ footer .footer-logo {
   height: 40px;
   background-color: var(--color-iris);
   color: var(--color-cloud);
-  transition: background-color var(--anim-slow);
+  transition: background-color var(--anim-fast);
 }
 .social-link-footer:hover {
   background-color: var(--color-green);
